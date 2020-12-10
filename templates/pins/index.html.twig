@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pins</title>
+</head>
+<body>
+  <h1>{{ pluralize(pins|length, 'Pin', 'Pins' )}}</h1>
+  {% for pin in pins %}
+    <article>
+      <h2>{{ pin.title }}</h2>
+      <p>{{ pin.description }}</p>
+    </article>
+  {% endfor %}
+</body>
+</html>
